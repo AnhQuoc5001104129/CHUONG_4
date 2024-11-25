@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Hai Cấp</title>
+  <style>
+    .menu {
+      font-family: Arial, sans-serif;
+      width: 250px;
+      margin: 20px;
+    }
+
+    .menu_theloai {
+      background-color: #FFFF99;
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      border: 1px solid #ccc;
+    }
+
+    .menu_nhom {
+      display: none;
+      background-color: #e0e0e0;
+      padding-left: 20px;
+    }
+
+    .menu_nhom a {
+      display: block;
+      padding: 8px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .menu_nhom a:hover {
+      background-color: #ccc;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".menu_nhom").hide();
+      $(".menu_theloai").click(function () {
+        // Toggle (ẩn hiện) menu con tương ứng
+        $(this).next(".menu_nhom").slideToggle();
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="menu">
+    <!-- Menu Đời sống -->
+    <div class="menu_theloai">Đời sống</div>
+    <div class="menu_nhom">
+      <a href="idTL-15">Hoa hậu</a>
+      <a href="?idTL-16">Nghệ Sĩ</a>
+      <a href="?idTL-17">Mỹ thuật</a>
+    </div>
+    <!-- Menu Giải trí -->
+    <div class="menu_theloai">Giải trí</div>
+    <div class="menu_nhom">
+      <a href="idTL-18">Âm nhạc</a>
+      <a href="?idTL-19">Thời trang</a>
+      <a href="?idTL-20">Điện ảnh</a>
+    </div>
+    <!-- Menu Thể thao -->
+    <div class="menu_theloai">Thể thao</div>
+    <div class="menu_nhom">
+      <a href="?idTL-21">Bóng đá</a>
+      <a href="?idTL-22">Tennis</a>
+      <a href="?idTL-23">Các môn khác</a>
+    </div>
+  </div>
+</body>
+</html>
